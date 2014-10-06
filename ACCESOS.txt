@@ -1,0 +1,25 @@
+Datos de usuario
+------------------------------
+ADMIN
+..............................
+
+user: admin@ifai.org.mx
+password: 12345
+
+******************************
+
+------------------------------
+Servidor público SIN COMISIONES
+..............................
+Liliana Herrera Martín 
+
+user: liliana.herrera@ifai.org.mx
+password: 12345
+ 
+
+------------------------------
+Usuario común
+..............................
+HAY QUE REGISTRARSE!!!
+
+ 
