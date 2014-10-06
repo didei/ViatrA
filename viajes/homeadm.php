@@ -5,7 +5,7 @@
       	exit();
   	}
  	else{?>
-  	<div class="row">
+    	<div class="row">
   		<div class="col-md-6 col-lg-6">
   			<div class="panel panel-default">
   				<div class="panel-heading">
@@ -21,18 +21,25 @@
 						$ncomisiones=$conexion->query($conteo);
 						$com=$ncomisiones->fetch_array();
 						
-						$conteo ="SELECT count(uid) AS 'usuarios' FROM usuarios WHERE fecha_alta = '$hoy'";
+						$conteo ="SELECT count(uid) AS 'usuarios' FROM usuarios WHERE fecha_alta = '$hoy' && rol = 2";
 						$nusuarios=$conexion->query($conteo);
 						$usr=$nusuarios->fetch_array();
 
 						$conteo ="SELECT count(id_comision) AS 'act' FROM actualizaciones WHERE fecha = '$hoy'";
 						$nupdates=$conexion->query($conteo);
 						$update=$nupdates->fetch_array();
+
+            $conteo ="SELECT count(uid) AS 'servidor' FROM usuarios WHERE fecha_alta = '$hoy' && rol = 1";
+            $nserviores=$conexion->query($conteo);
+            $servidores=$nserviores->fetch_array();
+
   					?>
-  					<div class="col-xs-10 col-md-6"> Comisiones:</div>
+  					<div class="col-xs-10 col-md-6"> Comisiones Iniciadas:</div>
   					<div class="col-xs-1 col-xs-offset-0 col-md-offset-5"> <?php echo $com['comisiones'];?></div>
-  					<div class="col-xs-10 col-md-6"> Usuarios:</div>
+  					<div class="col-xs-10 col-md-6"> Usuarios registrados:</div>
   					<div class="col-xs-1 col-xs-offset-0 col-md-offset-5"> <?php echo $usr['usuarios'];?></div>
+            <div class="col-xs-10 col-md-6"> Servidores dados de alta:</div>
+            <div class="col-xs-1 col-xs-offset-0 col-md-offset-5"> <?php echo $servidores['servidor'];?></div>
   					<div class="col-xs-10 col-md-6"> Comisiones Actualizadas:</div>
   					<div class="col-xs-1 col-xs-offset-0 col-md-offset-5"> <?php echo $update['act'];?></div>
   				</div>
@@ -44,7 +51,9 @@
   					<h3 class="panel-title"> Acciones </h3>
   				</div>
   				<div class="panel-body">
-  					<button class="btn btn-primary btn-md btn-block" onclick="location.href='?id=2'" ?> Agregar Servidor</button>
+  					<button class="btn btn-primary btn-md btn-block" onclick="location.href='?id=1'" ?> Agregar Servidor</button>
+            <button class="btn btn-primary btn-md btn-block" onclick="location.href='?id=2'" ?> Ver Comisiones  </button>
+            <button class="btn btn-primary btn-md btn-block" onclick="location.href='?id=3'" ?> Ver Servidores  </button>
   				</div>
   			</div>
   		</div>

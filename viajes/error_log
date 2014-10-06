@@ -1,0 +1,94 @@
+[05-Oct-2014 21:46:58 UTC] PHP Warning:  include(./include/conexion.php): failed to open stream: No such file or directory in /home/dideimx/public_html/ifai/viajes/homeadm.php on line 16
+[05-Oct-2014 21:46:58 UTC] PHP Warning:  include(./include/conexion.php): failed to open stream: No such file or directory in /home/dideimx/public_html/ifai/viajes/homeadm.php on line 16
+[05-Oct-2014 21:46:58 UTC] PHP Warning:  include(): Failed opening './include/conexion.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/dideimx/public_html/ifai/viajes/homeadm.php on line 16
+[05-Oct-2014 21:47:06 UTC] PHP Warning:  include(./include/conexion.php): failed to open stream: No such file or directory in /home/dideimx/public_html/ifai/viajes/homeadm.php on line 16
+[05-Oct-2014 21:47:06 UTC] PHP Warning:  include(./include/conexion.php): failed to open stream: No such file or directory in /home/dideimx/public_html/ifai/viajes/homeadm.php on line 16
+[05-Oct-2014 21:47:06 UTC] PHP Warning:  include(): Failed opening './include/conexion.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/dideimx/public_html/ifai/viajes/homeadm.php on line 16
+[05-Oct-2014 21:47:11 UTC] PHP Warning:  include(./include/conexion.php): failed to open stream: No such file or directory in /home/dideimx/public_html/ifai/viajes/faddservidor.php on line 8
+[05-Oct-2014 21:47:11 UTC] PHP Warning:  include(./include/conexion.php): failed to open stream: No such file or directory in /home/dideimx/public_html/ifai/viajes/faddservidor.php on line 8
+[05-Oct-2014 21:47:11 UTC] PHP Warning:  include(): Failed opening './include/conexion.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/dideimx/public_html/ifai/viajes/faddservidor.php on line 8
+[05-Oct-2014 21:47:18 UTC] PHP Warning:  include(./include/conexion.php): failed to open stream: No such file or directory in /home/dideimx/public_html/ifai/viajes/homeadm.php on line 16
+[05-Oct-2014 21:47:18 UTC] PHP Warning:  include(./include/conexion.php): failed to open stream: No such file or directory in /home/dideimx/public_html/ifai/viajes/homeadm.php on line 16
+[05-Oct-2014 21:47:18 UTC] PHP Warning:  include(): Failed opening './include/conexion.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/dideimx/public_html/ifai/viajes/homeadm.php on line 16
+[05-Oct-2014 21:47:21 UTC] PHP Warning:  include(./include/conexion.php): failed to open stream: No such file or directory in /home/dideimx/public_html/ifai/viajes/faddservidor.php on line 8
+[05-Oct-2014 21:47:21 UTC] PHP Warning:  include(./include/conexion.php): failed to open stream: No such file or directory in /home/dideimx/public_html/ifai/viajes/faddservidor.php on line 8
+[05-Oct-2014 21:47:21 UTC] PHP Warning:  include(): Failed opening './include/conexion.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/dideimx/public_html/ifai/viajes/faddservidor.php on line 8
+[05-Oct-2014 21:47:25 UTC] PHP Warning:  include(./include/conexion.php): failed to open stream: No such file or directory in /home/dideimx/public_html/ifai/viajes/homeadm.php on line 16
+[05-Oct-2014 21:47:25 UTC] PHP Warning:  include(./include/conexion.php): failed to open stream: No such file or directory in /home/dideimx/public_html/ifai/viajes/homeadm.php on line 16
+[05-Oct-2014 21:47:25 UTC] PHP Warning:  include(): Failed opening './include/conexion.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/dideimx/public_html/ifai/viajes/homeadm.php on line 16
+[05-Oct-2014 21:47:42 UTC] PHP Warning:  include(./include/conexion.php): failed to open stream: No such file or directory in /home/dideimx/public_html/ifai/viajes/faddservidor.php on line 8
+[05-Oct-2014 21:47:42 UTC] PHP Warning:  include(./include/conexion.php): failed to open stream: No such file or directory in /home/dideimx/public_html/ifai/viajes/faddservidor.php on line 8
+[05-Oct-2014 21:47:42 UTC] PHP Warning:  include(): Failed opening './include/conexion.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/dideimx/public_html/ifai/viajes/faddservidor.php on line 8
+[05-Oct-2014 21:47:46 UTC] PHP Warning:  include(./include/conexion.php): failed to open stream: No such file or directory in /home/dideimx/public_html/ifai/viajes/homeadm.php on line 16
+[05-Oct-2014 21:47:46 UTC] PHP Warning:  include(./include/conexion.php): failed to open stream: No such file or directory in /home/dideimx/public_html/ifai/viajes/homeadm.php on line 16
+[05-Oct-2014 21:47:46 UTC] PHP Warning:  include(): Failed opening './include/conexion.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/dideimx/public_html/ifai/viajes/homeadm.php on line 16
+[05-Oct-2014 21:47:48 UTC] PHP Warning:  include(./include/conexion.php): failed to open stream: No such file or directory in /home/dideimx/public_html/ifai/viajes/allcomisiones.php on line 23
+[05-Oct-2014 21:47:48 UTC] PHP Warning:  include(./include/conexion.php): failed to open stream: No such file or directory in /home/dideimx/public_html/ifai/viajes/allcomisiones.php on line 23
+[05-Oct-2014 21:47:48 UTC] PHP Warning:  include(): Failed opening './include/conexion.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/dideimx/public_html/ifai/viajes/allcomisiones.php on line 23
+[05-Oct-2014 21:47:54 UTC] PHP Warning:  include(./include/conexion.php): failed to open stream: No such file or directory in /home/dideimx/public_html/ifai/viajes/homeadm.php on line 16
+[05-Oct-2014 21:47:54 UTC] PHP Warning:  include(./include/conexion.php): failed to open stream: No such file or directory in /home/dideimx/public_html/ifai/viajes/homeadm.php on line 16
+[05-Oct-2014 21:47:54 UTC] PHP Warning:  include(): Failed opening './include/conexion.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/dideimx/public_html/ifai/viajes/homeadm.php on line 16
+[05-Oct-2014 21:47:56 UTC] PHP Warning:  include(./include/conexion.php): failed to open stream: No such file or directory in /home/dideimx/public_html/ifai/viajes/allcomisiones.php on line 23
+[05-Oct-2014 21:47:56 UTC] PHP Warning:  include(./include/conexion.php): failed to open stream: No such file or directory in /home/dideimx/public_html/ifai/viajes/allcomisiones.php on line 23
+[05-Oct-2014 21:47:56 UTC] PHP Warning:  include(): Failed opening './include/conexion.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/dideimx/public_html/ifai/viajes/allcomisiones.php on line 23
+[05-Oct-2014 21:49:10 UTC] PHP Warning:  include(./include/conexion.php): failed to open stream: No such file or directory in /home/dideimx/public_html/ifai/viajes/allcomisiones.php on line 23
+[05-Oct-2014 21:49:10 UTC] PHP Warning:  include(./include/conexion.php): failed to open stream: No such file or directory in /home/dideimx/public_html/ifai/viajes/allcomisiones.php on line 23
+[05-Oct-2014 21:49:10 UTC] PHP Warning:  include(): Failed opening './include/conexion.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/dideimx/public_html/ifai/viajes/allcomisiones.php on line 23
+[05-Oct-2014 21:49:21 UTC] PHP Warning:  include(./include/conexion.php): failed to open stream: No such file or directory in /home/dideimx/public_html/ifai/viajes/faddservidor.php on line 8
+[05-Oct-2014 21:49:21 UTC] PHP Warning:  include(./include/conexion.php): failed to open stream: No such file or directory in /home/dideimx/public_html/ifai/viajes/faddservidor.php on line 8
+[05-Oct-2014 21:49:21 UTC] PHP Warning:  include(): Failed opening './include/conexion.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/dideimx/public_html/ifai/viajes/faddservidor.php on line 8
+[05-Oct-2014 21:49:49 UTC] PHP Warning:  include(./include/conexion.php): failed to open stream: No such file or directory in /home/dideimx/public_html/ifai/viajes/allcomisiones.php on line 23
+[05-Oct-2014 21:49:49 UTC] PHP Warning:  include(./include/conexion.php): failed to open stream: No such file or directory in /home/dideimx/public_html/ifai/viajes/allcomisiones.php on line 23
+[05-Oct-2014 21:49:49 UTC] PHP Warning:  include(): Failed opening './include/conexion.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/dideimx/public_html/ifai/viajes/allcomisiones.php on line 23
+[05-Oct-2014 23:47:04 UTC] PHP Warning:  include(./include/conexion.php): failed to open stream: No such file or directory in /home/dideimx/public_html/ifai/viajes/faddservidor.php on line 8
+[05-Oct-2014 23:47:04 UTC] PHP Warning:  include(./include/conexion.php): failed to open stream: No such file or directory in /home/dideimx/public_html/ifai/viajes/faddservidor.php on line 8
+[05-Oct-2014 23:47:04 UTC] PHP Warning:  include(): Failed opening './include/conexion.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/dideimx/public_html/ifai/viajes/faddservidor.php on line 8
+[06-Oct-2014 00:27:14 UTC] PHP Warning:  include(./include/conexion.php): failed to open stream: No such file or directory in /home/dideimx/public_html/ifai/viajes/allservidores.php on line 20
+[06-Oct-2014 00:27:14 UTC] PHP Warning:  include(./include/conexion.php): failed to open stream: No such file or directory in /home/dideimx/public_html/ifai/viajes/allservidores.php on line 20
+[06-Oct-2014 00:27:14 UTC] PHP Warning:  include(): Failed opening './include/conexion.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/dideimx/public_html/ifai/viajes/allservidores.php on line 20
+[06-Oct-2014 00:27:32 UTC] PHP Warning:  include(./include/conexion.php): failed to open stream: No such file or directory in /home/dideimx/public_html/ifai/viajes/allservidores.php on line 20
+[06-Oct-2014 00:27:32 UTC] PHP Warning:  include(./include/conexion.php): failed to open stream: No such file or directory in /home/dideimx/public_html/ifai/viajes/allservidores.php on line 20
+[06-Oct-2014 00:27:32 UTC] PHP Warning:  include(): Failed opening './include/conexion.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/dideimx/public_html/ifai/viajes/allservidores.php on line 20
+[06-Oct-2014 00:28:28 UTC] PHP Warning:  include(./include/conexion.php): failed to open stream: No such file or directory in /home/dideimx/public_html/ifai/viajes/allservidores.php on line 20
+[06-Oct-2014 00:28:28 UTC] PHP Warning:  include(./include/conexion.php): failed to open stream: No such file or directory in /home/dideimx/public_html/ifai/viajes/allservidores.php on line 20
+[06-Oct-2014 00:28:28 UTC] PHP Warning:  include(): Failed opening './include/conexion.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/dideimx/public_html/ifai/viajes/allservidores.php on line 20
+[06-Oct-2014 00:34:21 UTC] PHP Warning:  include(./include/conexion.php): failed to open stream: No such file or directory in /home/dideimx/public_html/ifai/viajes/delusuario.php on line 3
+[06-Oct-2014 00:34:21 UTC] PHP Warning:  include(./include/conexion.php): failed to open stream: No such file or directory in /home/dideimx/public_html/ifai/viajes/delusuario.php on line 3
+[06-Oct-2014 00:34:21 UTC] PHP Warning:  include(): Failed opening './include/conexion.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/dideimx/public_html/ifai/viajes/delusuario.php on line 3
+[06-Oct-2014 00:34:21 UTC] PHP Fatal error:  Call to undefined function Conectar() in /home/dideimx/public_html/ifai/viajes/delusuario.php on line 6
+[06-Oct-2014 01:56:24 UTC] PHP Fatal error:  main(): Cannot write property in /home/dideimx/public_html/ifai/viajes/detalle_comision.php on line 187
+[06-Oct-2014 01:56:37 UTC] PHP Fatal error:  main(): Cannot write property in /home/dideimx/public_html/ifai/viajes/detalle_comision.php on line 187
+[06-Oct-2014 01:57:23 UTC] PHP Fatal error:  main(): Cannot write property in /home/dideimx/public_html/ifai/viajes/detalle_comision.php on line 187
+[06-Oct-2014 01:59:32 UTC] PHP Warning:  Attempt to assign property of non-object in /home/dideimx/public_html/ifai/viajes/detalle_comision.php on line 244
+[06-Oct-2014 02:20:22 UTC] PHP Fatal error:  Call to a member function fetch_array() on a non-object in /home/dideimx/public_html/ifai/viajes/homeadm.php on line 34
+[06-Oct-2014 02:22:12 UTC] PHP Fatal error:  Call to a member function fetch_array() on a non-object in /home/dideimx/public_html/ifai/viajes/homeadm.php on line 34
+[06-Oct-2014 02:24:51 UTC] PHP Fatal error:  Call to a member function fetch_array() on a non-object in /home/dideimx/public_html/ifai/viajes/homeadm.php on line 34
+[06-Oct-2014 03:16:06 UTC] PHP Fatal error:  Call to a member function fetch_array() on a non-object in /home/dideimx/public_html/ifai/viajes/perfil.php on line 53
+[06-Oct-2014 03:17:53 UTC] PHP Fatal error:  Call to a member function fetch_array() on a non-object in /home/dideimx/public_html/ifai/viajes/perfil.php on line 53
+[06-Oct-2014 03:37:49 UTC] PHP Parse error:  syntax error, unexpected '$file' (T_VARIABLE) in /home/dideimx/public_html/ifai/viajes/savefile.php on line 5
+[06-Oct-2014 03:39:55 UTC] PHP Fatal error:  Call to a member function fetch_array() on a non-object in /home/dideimx/public_html/ifai/viajes/perfil.php on line 53
+[06-Oct-2014 03:39:56 UTC] PHP Fatal error:  Call to a member function fetch_array() on a non-object in /home/dideimx/public_html/ifai/viajes/perfil.php on line 53
+[06-Oct-2014 03:53:21 UTC] PHP Strict Standards:  Only variables should be passed by reference in /home/dideimx/public_html/ifai/viajes/savefile.php on line 8
+[06-Oct-2014 03:54:05 UTC] PHP Strict Standards:  Only variables should be passed by reference in /home/dideimx/public_html/ifai/viajes/savefile.php on line 5
+[06-Oct-2014 03:55:57 UTC] PHP Strict Standards:  Only variables should be passed by reference in /home/dideimx/public_html/ifai/viajes/savefile.php on line 5
+[06-Oct-2014 03:58:15 UTC] PHP Strict Standards:  Only variables should be passed by reference in /home/dideimx/public_html/ifai/viajes/savefile.php on line 5
+[06-Oct-2014 03:59:01 UTC] PHP Warning:  include_once(./info_funcionario.php): failed to open stream: No such file or directory in /home/dideimx/public_html/ifai/viajes/main.php on line 46
+[06-Oct-2014 03:59:01 UTC] PHP Warning:  include_once(): Failed opening './info_funcionario.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/dideimx/public_html/ifai/viajes/main.php on line 46
+[06-Oct-2014 04:08:02 UTC] PHP Warning:  include_once(./info_funcionario.php): failed to open stream: No such file or directory in /home/dideimx/public_html/ifai/viajes/main.php on line 46
+[06-Oct-2014 04:08:02 UTC] PHP Warning:  include_once(): Failed opening './info_funcionario.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/dideimx/public_html/ifai/viajes/main.php on line 46
+[06-Oct-2014 04:08:17 UTC] PHP Warning:  include_once(./info_funcionario.php): failed to open stream: No such file or directory in /home/dideimx/public_html/ifai/viajes/main.php on line 46
+[06-Oct-2014 04:08:17 UTC] PHP Warning:  include_once(): Failed opening './info_funcionario.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/dideimx/public_html/ifai/viajes/main.php on line 46
+[06-Oct-2014 04:13:02 UTC] PHP Strict Standards:  Only variables should be passed by reference in /home/dideimx/public_html/ifai/viajes/savefile.php on line 5
+[06-Oct-2014 04:16:36 UTC] PHP Strict Standards:  Only variables should be passed by reference in /home/dideimx/public_html/ifai/viajes/savefile.php on line 5
+[06-Oct-2014 04:16:56 UTC] PHP Strict Standards:  Only variables should be passed by reference in /home/dideimx/public_html/ifai/viajes/savefile.php on line 5
+[06-Oct-2014 04:17:53 UTC] PHP Strict Standards:  Only variables should be passed by reference in /home/dideimx/public_html/ifai/viajes/savefile.php on line 5
+[06-Oct-2014 04:18:25 UTC] PHP Strict Standards:  Only variables should be passed by reference in /home/dideimx/public_html/ifai/viajes/savefile.php on line 5
+[06-Oct-2014 04:18:25 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/dideimx/public_html/ifai/viajes/savefile.php:5) in /home/dideimx/public_html/ifai/viajes/savefile.php on line 13
+[06-Oct-2014 04:19:13 UTC] PHP Strict Standards:  Only variables should be passed by reference in /home/dideimx/public_html/ifai/viajes/savefile.php on line 5
+[06-Oct-2014 04:19:13 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/dideimx/public_html/ifai/viajes/savefile.php:5) in /home/dideimx/public_html/ifai/viajes/savefile.php on line 13
+[06-Oct-2014 04:22:16 UTC] PHP Parse error:  syntax error, unexpected 'include' (T_INCLUDE), expecting ',' or ';' in /home/dideimx/public_html/ifai/viajes/savefile.php on line 10
+[06-Oct-2014 04:22:50 UTC] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /home/dideimx/public_html/ifai/viajes/savefile.php on line 14
+[06-Oct-2014 04:23:14 UTC] PHP Strict Standards:  Only variables should be passed by reference in /home/dideimx/public_html/ifai/viajes/savefile.php on line 5
+[06-Oct-2014 04:23:42 UTC] PHP Strict Standards:  Only variables should be passed by reference in /home/dideimx/public_html/ifai/viajes/savefile.php on line 5
+[06-Oct-2014 04:24:09 UTC] PHP Strict Standards:  Only variables should be passed by reference in /home/dideimx/public_html/ifai/viajes/savefile.php on line 5
+[06-Oct-2014 04:30:06 UTC] PHP Strict Standards:  Only variables should be passed by reference in /home/dideimx/public_html/ifai/viajes/savefile.php on line 5

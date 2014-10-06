@@ -161,13 +161,13 @@
 	margin-top:10px;
 }
 #img-maleta{
-	top: 67px;
+	top: 10px;
 	left: 17px;
 	position: absolute;
 	z-index:1000;
 }
 #img-maleta img{
-	width:400px;
+	width:350px;
 }
 @media(max-width:1340px){
 	#img-maleta img{
@@ -282,11 +282,95 @@
 .navbar-form input[type=text]{
 	width:150px;
 }
+
+.c_pointer{
+	cursor: pointer;
+}
+
+.margen_ab_30px{
+	margin-bottom:30px;
+}
+
+.margen_ar_40px{
+	margin-top:40px;
+}
+
+.img-circle{
+	border:#F9F9F9 solid 3px;
+}
+
+.img-liston{
+	/*margin-top:-100px;*/
+	left: 0;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    top: 130px;
+}
+.seg{
+	transition: opacity 1s;
+	cursor:pointer;
+}
+.seg:hover{
+	opacity:0.7;
+}
+
+a:hover{
+	text-decoration:none;
+}
+
+#seguidos img{
+	display:initial !important;
+}
+.nombre-serv-seg{
+	width:130px;
+	margin:0 auto;
+	padding-top:30px;
+}
+.seguir{
+	margin-top: -70px !important;
+	color: white;
+	font-size: 18px;
+	width:130px;
+	padding-left:32px;
+	left: 0;
+    position: absolute;
+    right: 0;
+    top: 205px;
+    width: 130px;
+}
+.texto_verde{
+	color:#31BD34;
+	font-style: italic;
+	font-weight:bold;
+}
+#opciones{ 
+	display:none; 
+	width:100%; 
+	border:solid thin #DDDDDD; 
+	position:absolute; 
+	margin-top:8px; 
+	left:0px; 
+	z-index:10000; 
+	background:#FFF; 
+}
+#opciones a{ 
+	display: block; 
+	height: 25px; 
+	color: #007050; 
+	text-decoration:none;
+	padding:5px 10px 27px 10px
+}
+#opciones a:hover{
+	background: #F9F9F9;
+	padding:5px 10px 27px 10px;
+}
 @media (min-width: 1200px){
 	#campo-busqueda {
 		margin-left: 74%;
 	}
 }
+
 @media(max-width:1160px){
 	.header{
 		/*height:120px;*/
@@ -316,6 +400,9 @@
 	}
 	.navbar-form{
 		padding-right:0;
+	}
+	.contenido-seccion{
+		margin-top: 40px;
 	}
 }
 @media(max-width:1070px){
@@ -422,6 +509,25 @@
 	}
 		
 }
+@media(max-width:380px){
+	.img-liston{
+		top:127px
+	}
+	.seguir{
+		top:199px;
+	}
+	.img-liston, .seguir, .nombre-serv-seg{
+		width:95px;
+	}
+	.seguir{
+		font-size:16px;
+	}
+}
+@media(max-width:330px){
+	.nombre-serv-seg{
+		margin-top:15px;
+	}
+}
 @media(max-width:320px){
 	.header .titulo{
 		font-size:26px;
@@ -430,15 +536,8 @@
 		/*width:50%;*/
 	}
 }
-
-#Calendar1, #Calendar2{
-	cursor: pointer;
-}
-
-.margen_ab_20px{
-	margin-bottom:20px;
-}
-
-.img-circle{
-	border:#F9F9F9 solid 3px;
+@media(max-width:290px){
+	.nombre-serv-seg{
+		margin-top:25px;
+	}
 }

@@ -24,7 +24,7 @@
                             <div class   ="form-group col-xs-12 col-sm-4" id='CONSECUTIVO-div'>
                                 <label for='CONSECUTIVO'>Número de comisión*</label>
                                 <input type = 'hidden' value="<?php echo $_SESSION['uid'] ?>" id='UID' >
-                                <input type ="text" class="form-control" id="CONSECUTIVO" placeholder="Ingresa consecutivo">
+                                <input type ="text" class="form-control" id="CONSECUTIVO" placeholder="Consecutivo">
                             </div>
                             <div class   ="form-group col-xs-12 col-sm-8" id='MEC_ORIGEN-div'>
                                 <label for   ="MEC_ORIGEN">Mecanismo que origina la comisión*</label>
@@ -36,44 +36,44 @@
                             </div>
                             <div class ="form-group col-xs-12" id='INST_GENERA-div'>
                                 <label for ="INST_GENERA">Quién invita / qué UR solicita*</label>
-                                <input type ="text" class="form-control" id="INST_GENERA" placeholder="Ingresa quién invita">
+                                <input type ="text" class="form-control" id="INST_GENERA" placeholder="Quién invita">
                             </div>
                             <div class   ="form-group col-xs-12" id='UR-div'>
                                 <label for   ="UR">Unidad Responsable</label>
-                                <input type  ="text" class="form-control" id="UR" placeholder="Ingresa unidad responsable">
+                                <input type  ="text" class="form-control" id="UR" placeholder="Unidad responsable">
                             </div>
                             <div class   ="form-group col-xs-12 col-sm-6" id='TIPO_REP-div'>
                                 <label for   ="TIPO_REP">Tipo de representación requerida*</label>
-                                <input type  ="text" class="form-control" id="TIPO_REP" placeholder="Ingresa tipo de representación">
+                                <input type  ="text" class="form-control" id="TIPO_REP" placeholder="Tipo de representación">
                             </div>
                             <div class   ="form-group col-xs-12 col-sm-6" id='TIPO_COM-div'>
                                 <label for   ="TIPO_COM">Tipo de comisión*</label>
-                                <input type  ="text" class="form-control" id="TIPO_COM" placeholder="Ingresa tipo de comisión">
+                                <input type  ="text" class="form-control" id="TIPO_COM" placeholder="Tipo de comisión">
                             </div>
                             <div class   ="form-group col-xs-12" id='TEMA-div'>
                                 <label for   ="TEMA">Tema*</label>
-                                <input type  ="text" class="form-control" id="TEMA" placeholder="Ingresa el tema">
+                                <input type  ="text" class="form-control" id="TEMA" placeholder="Tema">
                             </div>
                             <div class   ="form-group col-xs-12" id='EVENTO-div'>
                                 <label for   ="EVENTO">Nombre del evento o actividad principal a la que se asiste*</label>
-                                <input type  ="text" class="form-control" id="EVENTO" placeholder="Ingresa el evento o actividad">
+                                <input type  ="text" class="form-control" id="EVENTO" placeholder="Evento o actividad">
                             </div>
                             <div class   ="form-group col-xs-12" id='URL_EVENTO-div'>
                                 <label for   ="URL_EVENTO">URL del evento</label>
-                                <input type  ="text" class="form-control" id="URL_EVENTO" placeholder="Ingresa el url del evento">
+                                <input type  ="text" class="form-control" id="URL_EVENTO" placeholder="Url del evento">
                             </div>
                             <div class   ="form-group col-xs-12 col-sm-6" id='FECHAINICIO_COM-div'>
                                 <label for   ="FECHAINICIO_COM" >Fecha de inicio de participación en el evento o actividad*</label>
                                 <div class="input-group">
-                                    <input type  ="datetime" class="form-control" id="FECHAINICIO_COM" disabled placeholder="Ingresa fecha de inicio">
-                                    <span class="input-group-addon" id='Calendar1'><span class="glyphicon glyphicon-calendar"></span></span>
+                                    <input type  ="datetime" class="form-control" id="FECHAINICIO_COM" disabled placeholder="Fecha de inicio">
+                                    <span class="input-group-addon c_pointer" id='Calendar1'><span class="glyphicon glyphicon-calendar"></span></span>
                                 </div>
                             </div>
                             <div class   ="form-group col-xs-12 col-sm-6" id='FECHAFIN_COM-div'>
                                 <label for   ="FECHAFIN_COM" >Fecha de fin de participación en el evento o actividad*</label>
                                 <div class="input-group">
-                                    <input type  ="datetime" class="form-control" id="FECHAFIN_COM" disabled placeholder="Ingresa fecha de fin">
-                                    <span class="input-group-addon" id='Calendar2'><span class="glyphicon glyphicon-calendar"></span></span>
+                                    <input type  ="datetime" class="form-control" id="FECHAFIN_COM" disabled placeholder="Fecha de fin">
+                                    <span class="input-group-addon c_pointer" id='Calendar2'><span class="glyphicon glyphicon-calendar"></span></span>
                                 </div>
                             </div>
                           </div>
@@ -99,18 +99,18 @@
                             </div>
                             <div class   ="form-group col-xs-12 col-sm-8" id='ACUERDO-div'>
                                 <label for   =" ACUERDO">No. de acuerdo de autorización del pleno / de coordinadores</label>
-                                <input type  ="text" class="form-control" id="ACUERDO" placeholder=" Ingresa acuerdo">
+                                <input type  ="text" class="form-control" id="ACUERDO" placeholder="No. de acuerdo">
                             </div>
                             <div class   ="form-group col-xs-12 col-sm-6" id='OFICIO-div'>
                                 <label for   =" OFICIO">No. de oficio de comisión</label>
-                                <input type  ="text" class="form-control" id="OFICIO" placeholder=" Ingresa oficio">
+                                <input type  ="text" class="form-control" id="OFICIO" placeholder="No. de oficio">
                             </div>
                             <div class   ="form-group col-xs-12 col-sm-6" id='CUBRE_PASAJE-div'>
                                 <label for   =" CUBRE_PASAJE">Institución que cubre pasaje</label>
-                                <input type  ="text" class="form-control" id="CUBRE_PASAJE" placeholder=" Ingresa la institución ">
+                                <input type  ="text" class="form-control" id="CUBRE_PASAJE" placeholder="Institución que cubre">
                             </div>
                             <div class   ="form-group col-xs-12 col-sm-6" id='TIPO_PASAJE-div'>
-                                <label for   =" TIPO_PASAJE">Tipo de pasaje*</label>
+                                <label for   =" TIPO_PASAJE">Tipo de pasaje</label>
                                 <select id="TIPO_PASAJE" class="form-control">
                                     <option value="0">Elige tipo</option>
                                     <option>Terrestre</option>
@@ -120,49 +120,49 @@
                             </div>
                             <div class   ="form-group col-xs-12 col-sm-6" id='GASTO_PASAJE-div'>
                                 <label for   ="GASTO_PASAJE">Gasto por concepto de pasaje en M.N</label>
-                                <input type  ="text" class="form-control" id="GASTO_PASAJE" placeholder=" Ingresa la institución ">
+                                <input type  ="text" class="form-control" id="GASTO_PASAJE" placeholder="Gastos de pasaje ">
                             </div>
                             <div id='Detalle_vuelo' class="collapse in col-xs-12">
                                 <div class   ="form-group col-xs-12 col-sm-6" id='LINEA_ORIGEN-div'>
                                     <label for   ="LINEA_ORIGEN">Aerolina(s) de vuelo(s) de ida*</label>
-                                    <input type  ="text" class="form-control" id="LINEA_ORIGEN" placeholder=" Ingresa aerolina(s) ">
+                                    <input type  ="text" class="form-control" id="LINEA_ORIGEN" placeholder="Aerolina(s) de ida">
                                 </div> 
                                 <div class   ="form-group col-xs-12 col-sm-6" id='VUELO_ORIGEN-div'>
                                     <label for   ="VUELO_ORIGEN">Numero(s) de vuelo de ida*</label>
-                                    <input type  ="text" class="form-control" id="VUELO_ORIGEN" placeholder=" Ingresa el numero(s) ">
+                                    <input type  ="text" class="form-control" id="VUELO_ORIGEN" placeholder="Vuelo(s) de ida ">
                                 </div>
                                 <div class   ="form-group col-xs-12 col-sm-6" id='LINEA_REGRESO-div'>
                                     <label for   ="LINEA_REGRESO">Aerolina(s) de vuelo(s) de regreso*</label>
-                                    <input type  ="text" class="form-control" id="LINEA_REGRESO" placeholder=" Ingresa aerolina(s) ">
+                                    <input type  ="text" class="form-control" id="LINEA_REGRESO" placeholder="Aerolina(s) de regreso">
                                 </div> 
                                 <div class   ="form-group col-xs-12 col-sm-6" id='VUELO_REGRESO-div'>
                                     <label for   ="VUELO_REGRESO">Numero(s) de vuelo de regreso*</label>
-                                    <input type  ="text" class="form-control" id="VUELO_REGRESO" placeholder=" Ingresa el numero(s) ">
+                                    <input type  ="text" class="form-control" id="VUELO_REGRESO" placeholder="Vuelo(s) de regreso">
                                 </div>
                             </div>    
                             <div class   ="form-group col-xs-12 col-sm-6 col-md-4" id='PAIS_ORIGEN-div'>
                                 <label for   =" PAIS_ORIGEN">Pais de origen*</label>
-                                <input type  ="text" class="form-control" id="PAIS_ORIGEN" placeholder=" Ingresa pais ">
+                                <input type  ="text" class="form-control" id="PAIS_ORIGEN" placeholder="Pais de origen">
                             </div>
                             <div class   ="form-group col-xs-12 col-sm-6 col-md-4" id='ESTADO_ORIGEN-div'>
                                 <label for   =" ESTADO_ORIGEN">Estado de origen*</label>
-                                <input type  ="text" class="form-control" id="ESTADO_ORIGEN" placeholder=" Ingresa estado ">
+                                <input type  ="text" class="form-control" id="ESTADO_ORIGEN" placeholder="Estado de origen">
                             </div>
                             <div class   ="form-group col-xs-12 col-sm-6 col-md-4" id='CIUDAD_ORIGEN-div'>
                                 <label for   =" CIUDAD_ORIGEN">Ciudad de origen*</label>
-                                <input type  ="text" class="form-control" id="CIUDAD_ORIGEN" placeholder=" Ingresa ciudad ">
+                                <input type  ="text" class="form-control" id="CIUDAD_ORIGEN" placeholder="Ciudad de origen">
                             </div>
                             <div class   ="form-group col-xs-12 col-sm-6 col-md-4" id='PAIS_DESTINO-div'>
                                 <label for   =" PAIS_DESTINO">Pais de destino*</label>
-                                <input type  ="text" class="form-control" id="PAIS_DESTINO" placeholder=" Ingresa pais ">
+                                <input type  ="text" class="form-control" id="PAIS_DESTINO" placeholder="Pais de destino">
                             </div>
                             <div class   ="form-group col-xs-12 col-sm-6 col-md-4" id='ESTADO_DESTINO-div'>
                                 <label for   =" ESTADO_DESTINO">Estado de destino*</label>
-                                <input type  ="text" class="form-control" id="ESTADO_DESTINO" placeholder=" Ingresa estado ">
+                                <input type  ="text" class="form-control" id="ESTADO_DESTINO" placeholder="Estado de destino">
                             </div>
                             <div class   ="form-group col-xs-12 col-sm-6 col-md-4" id='CIUDAD_DESTINO-div'>
                                 <label for   =" CIUDAD_DESTINO">Ciudad de destino*</label>
-                                <input type  ="text" class="form-control" id="CIUDAD_DESTINO" placeholder=" Ingresa ciudad ">
+                                <input type  ="text" class="form-control" id="CIUDAD_DESTINO" placeholder="Ciudad de destino">
                             </div>     
                           </div>
                         </div>
@@ -171,6 +171,18 @@
                     <button type ="submit" class="btn btn-default" id="Guardar" onClick="return false;">Guardar</button>
                 </form>
             </div>
+        </div>
+
+        <div class="modal fade" id="Finalizado" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+              <div class="modal-body" id='Mensaje'>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Aceptar</button>
+              </div>
+            </div>
+          </div>
         </div>
 <?php 
     }
@@ -241,6 +253,10 @@
             var OFICIO              = $('#OFICIO').val();
             var CUBRE_PASAJE        = $('#CUBRE_PASAJE').val();
             var TIPO_PASAJE         = $('#TIPO_PASAJE').val();
+            var LINEA_ORIGEN        = $('#LINEA_ORIGEN').val();
+            var VUELO_ORIGEN        = $('#VUELO_ORIGEN').val();
+            var LINEA_REGRESO       = $('#LINEA_REGRESO').val();
+            var VUELO_REGRESO       = $('#VUELO_REGRESO').val();  
             var GASTO_PASAJE        = $('#GASTO_PASAJE').val();
             var PAIS_ORIGEN         = $('#PAIS_ORIGEN').val();
             var ESTADO_ORIGEN       = $('#ESTADO_ORIGEN').val();
@@ -273,28 +289,6 @@
             if(PAIS_ORIGEN == '' || PAIS_ORIGEN == null){
                 $('#PAIS_ORIGEN').focus();
                 $("#PAIS_ORIGEN-div").addClass("has-error");
-            }
-            if(TIPO_PASAJE == 'Aereo'){
-                if(VUELO_REGRESO == '' ){
-                    $('#VUELO_REGRESO').focus();
-                    $("#VUELO_REGRESO-div").addClass("has-error");
-                }
-                if(LINEA_REGRESO == '' ){
-                    $('#LINEA_REGRESO').focus();
-                    $("#LINEA_REGRESO-div").addClass("has-error");
-                }
-                if(VUELO_ORIGEN == '' ){
-                    $('#VUELO_ORIGEN').focus();
-                    $("#VUELO_ORIGEN-div").addClass("has-error");
-                }
-                if(LINEA_ORIGEN == '' ){
-                    $('#LINEA_ORIGEN').focus();
-                    $("#LINEA_ORIGEN-div").addClass("has-error");
-                }
-            }
-            if(TIPO_PASAJE == '0'){
-                $('#TIPO_PASAJE').focus();
-                $("#TIPO_PASAJE-div").addClass("has-error");
             }
             if(TIPO_VIAJE == '0'){
                 $('#TIPO_VIAJE').focus();
@@ -338,7 +332,7 @@
             }                                                   
 
             if(
-                MEC_ORIGEN      == '' || 
+                MEC_ORIGEN      == '0' || 
                 INST_GENERA     == '' || 
                 UR              == '' || 
                 TIPO_REP        == '' || 
@@ -363,21 +357,6 @@
                 CIUDAD_DESTINO  == ''  || CIUDAD_DESTINO    == null)
             {
                 return false;
-            }
-
-            if(TIPO_PASAJE == 'Aereo'){ 
-                var LINEA_ORIGEN    = $('#LINEA_ORIGEN').val();
-                var VUELO_ORIGEN    = $('#VUELO_ORIGEN').val();
-                var LINEA_REGRESO   = $('#LINEA_REGRESO').val();
-                var VUELO_REGRESO   = $('#VUELO_REGRESO').val();  
-                if( LINEA_ORIGEN    == ''  ||
-                    VUELO_ORGEN     == ''  || 
-                    LINEA_REGRESO   == ''  || 
-                    VUELO_REGRESO   == '')
-                {
-                    $(function () { $('#Detalle_vuelo').collapse('toggle')});
-                    return false;
-                }
             }
 
             var parametros = {
@@ -418,10 +397,14 @@
                 data: parametros,
                 success: function(res){
                     if(res==1){
-                        alert("Comision creada");
-                        location.href='?id=2';
+                        $('#Mensaje').html('Comisión creada')
+                        $('#Finalizado').modal('show');
+                        $('#Finalizado').on('hide.bs.modal',function(){
+                            window.location.href='?id=2';
+                        });
                     }else{
-                        alert(res)
+                        $('#Mensaje').html('Error al intentar crear la comisión: '+res)
+                        $('#Finalizado').modal('show');
                     }
                 }
             });

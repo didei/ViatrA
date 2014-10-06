@@ -7,13 +7,26 @@
         $conexion = Conectar("dideimx_ifai");
         $ID_COMISION = clear_string($conexion,$_GET['co']);
         $Resultado   = $conexion->query("SELECT * FROM comisiones as c, traslado as t WHERE c.id_comision = '$ID_COMISION' && t.id_comision = '$ID_COMISION'");
+        $Resultado2  = $conexion->query("SELECT * FROM informes WHERE id_comision = '$ID_COMISION' ");
+        $Resultado3  = $conexion->query("SELECT * FROM viaticos WHERE id_comision = '$ID_COMISION' ");
+        $Informe     = $Resultado2->fetch_array();
+        $viaticos    = $Resultado3->fetch_array();
         $Filas       = $Resultado->fetch_array();
         $Fecha1      = $Filas['fechainicio_com'];
         $Fecha2      = $Filas['fechafin_com'];
         ?>
         <div class ="row">
             <div class="col-xs-12 text-center">
-                <h1>Comisión Actual</h1>
+                <?php
+                    session_start();
+                    $acces=$_SESSION['rol'];
+                    if($acces==0){
+                        echo "<h1> Editar comision ".$Filas['consecutivo']."</h1>";
+                    }
+                    else{
+                        echo "<h1>Comisión Actual</h1>";
+                    }
+                ?>
             </div>
             <div class ="col-xs-12 col-sm-10 col-sm-offset-1">
                 <form role="form">
@@ -73,14 +86,14 @@
                                 <label for   ="FECHAINICIO_COM" >Fecha de inicio de participación en el evento o actividad*</label>
                                 <div class="input-group">
                                     <input type  ="datetime" class="form-control" value="<?php echo $Fecha1 ?>" id="FECHAINICIO_COM" disabled placeholder="Ingresa fecha de inicio">
-                                    <span class="input-group-addon" id='Calendar1'><span class="glyphicon glyphicon-calendar"></span></span>
+                                    <span class="input-group-addon c_pointer" id='Calendar1'><span class="glyphicon glyphicon-calendar"></span></span>
                                 </div>
                             </div>
                             <div class   ="form-group col-xs-12 col-sm-6" id='FECHAFIN_COM-div'>
                                 <label for   ="FECHAFIN_COM" >Fecha de fin de participación en el evento o actividad*</label>
                                 <div class="input-group">
                                     <input type  ="datetime" class="form-control" value="<?php echo $Fecha2 ?>" id="FECHAFIN_COM" disabled placeholder="Ingresa fecha de fin">
-                                    <span class="input-group-addon" id='Calendar2'><span class="glyphicon glyphicon-calendar"></span></span>
+                                    <span class="input-group-addon c_pointer" id='Calendar2'><span class="glyphicon glyphicon-calendar"></span></span>
                                 </div>
                             </div>
                           </div>
@@ -174,16 +187,142 @@
                           </div>
                         </div>
                       </div>
+                      <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <div class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#colinforme">
+                                    Informe
+                                </a>
+                            </div>
+                        </div>
+                        <div class="panel-collapse collapse in" id="colinforme">
+                            <div class="panel-body">
+                                <div class   ="form-group col-xs-12 col-sm-6" id='FECHAINICIO_PAR-div'>
+                                    <label for   ="FECHAINICIO_PAR" >Fecha de inicio de participación en el evento o actividad*</label>
+                                    <div class="input-group">
+                                        <input type  ="datetime" class="form-control" value="<?php echo $Informe['fechainicio_part'] ?>" id="FECHAINICIO_PAR" disabled placeholder="Ingresa fecha de inicio">
+                                        <span class="input-group-addon c_pointer" id='Calendar3'><span class="glyphicon glyphicon-calendar"></span></span>
+                                    </div>
+                                </div>
+                                <div class   ="form-group col-xs-12 col-sm-6" id='FECHAFIN_PAR-div'>
+                                    <label for   ="FECHAFIN_PAR" >Fecha de fin de participación en el evento o actividad*</label>
+                                    <div class="input-group">
+                                        <input type  ="datetime" class="form-control" value="<?php echo $Informe['fechafin_part'] ?>" id="FECHAFIN_PAR" disabled placeholder="Ingresa fecha de fin">
+                                        <span class="input-group-addon c_pointer" id='Calendar4'><span class="glyphicon glyphicon-calendar"></span></span>
+                                    </div>
+                                </div>
+                                <div class="form-group" id='MOTIVO-div'>
+                                    <label for="MOTIVO">Motivo de la Comision</label>
+                                    <textarea id="MOTIVO" class="form-control" placeholder="motivo de la comisión"><?php echo $Informe['motivo'] ?></textarea>
+                                </div>
+                                 <div class="form-group" id='ANTECEDENTE-div'>
+                                    <label for="ANTECEDENTE">Antecedentes</label>
+                                    <textarea id="ANTECEDENTE" class="form-control" placeholder="antecedentes de la comisión"><?php echo $Informe['antecedente'] ?></textarea>
+                                </div>
+                                <div class="form-group" id='ACTIVIDAD-div'>
+                                    <label for="ACTIVIDAD">Actividad realizada</label>
+                                    <textarea id="ACTIVIDAD" class="form-control" placeholder="Actividad realizada en la comisión"><?php echo $Informe['actividad'] ?></textarea>
+                                </div>
+                                <div class="form-group" id="RESULTADOS-div">
+                                    <label for="RESULTADOS-div">Resultados Obtenidos</label>
+                                    <input type="text"  id="RESULTADOS" class="form-control" value="<?php echo $Informe['resultado'] ?>" placeholder="resultados obtenidos en la comición">
+                                </div>
+                                <div class="form-group" id="URL_COMUNICADO-div">
+                                    <label for="URL_COMUNICADO">URL del Comunicado</label>
+                                    <input type="text"  id="URL_COMUNICADO" class="form-control" value="<?php echo $Informe['url_comunicado'] ?>" placeholder="URL del comunicado">
+                                </div>
+                            </div>
+                        </div>
+                       </div>
+                       <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <div class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#colviaticos">Informe de Viaticos</a>
+                                </div>
+                            </div>
+                            <div class="panel-collapse collapse in" id="colviaticos">
+                                <div class="panel-body">
+                                    <div class="form-group col-xs-12  col-sm-4 col-md-4" id="GASTOS-div">
+                                        <label for="GASTOS"> Gastos Totales:</label>
+                                        <input type="text" id="GASTOS" class="form-control" value="<?php echo $viaticos['gasto_viatico'] ?>" placeholder="Total del gasto de los viaticos asignados">
+                                    </div>
+                                    <div class="form-group col-xs-12 col-sm-4 col-md-4" id="TARIFA_DIARIA-div">
+                                        <label for="TARIFA_DIARIA">Tarifa Fiaria</label>
+                                        <input type="text"  id="TARIFA_DIARIA" class="form-control" value="<?php echo $viaticos['tarifa_diaria'] ?>" placeholder="Viaticos coreespondientes por dia">
+                                    </div>
+                                    <div class="form-group col-xs-12 col-sm-4 col-md-4" id="MONEDA-div">
+                                        <label for="MONEDA">Moneda</label>
+                                        <select id="MONEDA" class="form-control">
+                                            <option value="MSP" >MXP</option>
+                                            <option value="USD" >USD</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-xs-12  col-sm-4 col-md-4" id="GASTOS_COMPROBADOS-div">
+                                        <label for="GASTOS_COMPROBADOS"> Gastos comprobados:</label>
+                                        <input type="text"  id="GASTOS_COMPROBADOS" class="form-control" value="<?php echo $viaticos['comprobado'] ?>" placeholder="Gastos comprobados">
+                                    </div>
+                                    <div class="form-group col-xs-12  col-sm-4 col-md-4" id="GASTOS_S_COMPROBAR-div">
+                                        <label for="GASTOS_S_COMPROBAR"> Gastos sin Comprobar:</label>
+                                        <input type="text" id="GASTOS_S_COMPROBAR" class="form-control" value="<?php echo $viaticos['sin_comprobar'] ?>" placeholder="Gastos sin Comprobar">
+                                    </div>
+                                   <div class="form-group col-xs-12  col-sm-4 col-md-4" id="VIATICOS_DEVUELTOS-div">
+                                        <label for="VIATICOS_DEVUELTOS"> Viaticos Devueltos:</label>
+                                        <input type="text" id="VIATICOS_DEVUELTOS" class="form-control" value="<?php echo $viaticos['viatico_devuelto'] ?>" placeholder="Viaticos Devueltos">
+                                    </div>
+                                    <legend> Hospedaje </legend>
+                                    <div class   ="form-group col-xs-12 col-sm-6" id='FECHAINICIO_HOTEL-div'>
+                                        <label for   ="FECHAINICIO_HOT" >Fecha de inicio del hospedaje</label>
+                                        <div class="input-group">
+                                            <input type  ="datetime" class="form-control" value="<?php echo $viaticos['fechainicio_hotel'] ?>" id="FECHAINICIO_HOTEL" disabled placeholder="Ingresa fecha de inicio">
+                                            <span class="input-group-addon c_pointer" id='Calendar5'><span class="glyphicon glyphicon-calendar"></span></span>
+                                        </div>
+                                    </div>
+                                    <div class   ="form-group col-xs-12 col-sm-6" id='FECHAFIN_HOTEL-div'>
+                                        <label for   ="FECHAFIN_HOT" >Fecha de inicio del hospedaje</label>
+                                        <div class="input-group">
+                                            <input type  ="datetime" class="form-control" value="<?php echo $viaticos['fechafin_hotel'] ?>" id="FECHAFIN_HOTEL" disabled placeholder="Ingresa fecha de fin">
+                                            <span class="input-group-addon c_pointer" id='Calendar6'><span class="glyphicon glyphicon-calendar"></span></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-xs-12  col-sm-4 col-md-4" id="CUBRE_HOSPEDAJE-div">
+                                        <label for="CUBRE_HOSPEDAJE"> Institución que cubre el Hospedaje:</label>
+                                        <input type="text" id="CUBRE_HOSPEDAJE" class="form-control" value="<?php echo $viaticos['inst_hospedaje'] ?>" placeholder="Quien cubre el hospedaje">
+                                    </div>
+                                    <div class="form-group col-xs-12  col-sm-4 col-md-4" id="HOTEL-div">
+                                        <label for="HOTEL"> Hotel:</label>
+                                        <input type="text" id="HOTEL" class="form-control" value="<?php echo $viaticos['hotel'] ?>" placeholder="Nombre del hotel">
+                                    </div>
+                                    <div class="form-group col-xs-12  col-sm-4 col-md-4" id="COSTO_HOTEL-div">
+                                        <label for="COSTO_HOTEL"> Costo del Hospedaje:</label>
+                                        <input type="text"  id="COSTO_HOTEL" class="form-control" value="<?php echo $viaticos['costo_hotel'] ?>" placeholder="Costo del Hotel">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <button type ="submit" class="btn btn-info" id="Guardar" onClick="return false;">Actualizar</button>
-                    <button type ="submit" class="btn btn-primary" id="Cerrar" onClick="return false;">Terminar comisión</button>
+                    <button type ="submit" class="btn btn-primary" id="Guardar" onClick="return false;">Actualizar</button>
                 </form>
             </div>
+        </div>
+
+        <div class="modal fade" id="Finalizado" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+              <div class="modal-body" id='Mensaje'>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Aceptar</button>
+              </div>
+            </div>
+          </div>
         </div>
 <?php 
     }
  ?>
  <script type="text/javascript">
+
+    $('#Finalizado').modal('hide');
+
  	$( "#Detalle_vuelo").collapse();
  	$(document).ready(function(){
 		if($("#TIPO_PASAJE").val() == "Aereo"){
@@ -216,8 +355,6 @@
 
         $.datepicker.setDefaults( $.datepicker.regional[ "es" ] );
 
-        $( "#FECHAFIN_COM" ).datepicker();
-        
 
         $( "#Calendar1" ).on("click", function(){
              $( "#FECHAINICIO_COM" ).datepicker();
@@ -229,7 +366,28 @@
              $( "#FECHAFIN_COM" ).datepicker("show");
         });
 
+        $( "#Calendar3" ).on("click", function(){
+             $( "#FECHAINICIO_PAR" ).datepicker();
+             $( "#FECHAINICIO_PAR" ).datepicker("show");
+        });
+        $( "#Calendar4" ).on("click", function(){
+             $( "#FECHAFIN_PAR" ).datepicker();
+             $( "#FECHAFIN_PAR" ).datepicker("show");
+        });
+
+        $( "#Calendar5" ).on("click", function(){
+             $( "#FECHAINICIO_HOTEL" ).datepicker();
+             $( "#FECHAINICIO_HOTEL" ).datepicker("show");
+        });
+        $( "#Calendar6" ).on("click", function(){
+             $( "#FECHAFIN_HOTEL" ).datepicker();
+             $( "#FECHAFIN_HOTEL" ).datepicker("show");
+        });
+
+
         $( "#coltraslado").collapse('hide');
+        $( "#colinforme").collapse('hide');
+        $( "#colviaticos").collapse('hide');
 		
 		/* muestra y oculta campos de vuelo*/			
         $( "#TIPO_PASAJE").on('change',function(){
@@ -255,11 +413,16 @@
             var URL_EVENTO          = $('#URL_EVENTO').val();
             var FECHAINICIO_COM     = $('#FECHAINICIO_COM').val();
             var FECHAFIN_COM        = $('#FECHAFIN_COM').val();
+
             var TIPO_VIAJE          = $('#TIPO_VIAJE').val();
             var ACUERDO             = $('#ACUERDO').val();
             var OFICIO              = $('#OFICIO').val();
             var CUBRE_PASAJE        = $('#CUBRE_PASAJE').val();
             var TIPO_PASAJE         = $('#TIPO_PASAJE').val();
+            var LINEA_ORIGEN        = $('#LINEA_ORIGEN').val();
+            var VUELO_ORIGEN        = $('#VUELO_ORIGEN').val();
+            var LINEA_REGRESO       = $('#LINEA_REGRESO').val();
+            var VUELO_REGRESO       = $('#VUELO_REGRESO').val(); 
             var GASTO_PASAJE        = $('#GASTO_PASAJE').val();
             var PAIS_ORIGEN         = $('#PAIS_ORIGEN').val();
             var ESTADO_ORIGEN       = $('#ESTADO_ORIGEN').val();
@@ -268,6 +431,27 @@
             var ESTADO_DESTINO      = $('#ESTADO_DESTINO').val();
             var CIUDAD_DESTINO      = $('#CIUDAD_DESTINO').val();
             var ID_COMISION         = $('#ID_COMISION').val();
+
+            var FECHAINICIO_PAR     = $("#FECHAINICIO_PAR").val();
+            var FECHAFIN_PAR        = $("#FECHAFIN_PAR").val();
+            var MOTIVO              = $("#MOTIVO").val();
+            var ANTECEDENTE         = $("#ANTECEDENTE").val();
+            var ACTIVIDAD           = $("#ACTIVIDAD").val();
+            var RESULTADOS          = $("#RESULTADOS").val();
+            var URL_COMUNICADO      = $("#URL_COMUNICADO").val();
+
+            var GASTOS              = $("#GASTOS").val();
+            var TARIFA_DIARIA       = $("#TARIFA_DIARIA").val();
+            var MONEDA              = $("#MONEDA").val();
+            var GASTOS_COMPROBADOS  = $("#GASTOS_COMPROBADOS").val();
+            var GASTOS_S_COMPROBAR  = $("#GASTOS_S_COMPROBAR").val();
+            var VIATICOS_DEVUELTOS  = $("#VIATICOS_DEVUELTOS").val();
+            var FECHAINICIO_HOTEL   = $("#FECHAINICIO_HOTEL").val();
+            var FECHAFIN_HOTEL      = $("#FECHAFIN_HOTEL").val();
+            var CUBRE_HOSPEDAJE     = $("#CUBRE_HOSPEDAJE").val();
+            var HOTEL               = $("#HOTEL").val();
+            var COSTO_HOTEL         = $("#COSTO_HOTEL").val();
+            
 
             if(CIUDAD_DESTINO == '' || CIUDAD_DESTINO == null){
                 $('#CIUDAD_DESTINO').focus();
@@ -292,7 +476,7 @@
             if(PAIS_ORIGEN == '' || PAIS_ORIGEN == null){
                 $('#PAIS_ORIGEN').focus();
                 $("#PAIS_ORIGEN-div").addClass("has-error");
-			}
+            }
             if(TIPO_PASAJE == '0'){
                 $('#TIPO_PASAJE').focus();
                 $("#TIPO_PASAJE-div").addClass("has-error");
@@ -336,10 +520,10 @@
             if(CONSECUTIVO == ''){
                 $('#CONSECUTIVO').focus();
                 $("#CONSECUTIVO-div").addClass("has-error");
-            }                                                   
+            }
 
             if(
-                MEC_ORIGEN      == '' || 
+                MEC_ORIGEN      == '0' || 
                 INST_GENERA     == '' || 
                 UR              == '' || 
                 TIPO_REP        == '' || 
@@ -364,13 +548,9 @@
                 CIUDAD_DESTINO  == ''  || CIUDAD_DESTINO    == null)
             {
                 return false;
-            }
+            }                                    
 
-            if(TIPO_PASAJE == 'Aereo'){ 
-                var LINEA_ORIGEN    = $('#LINEA_ORIGEN').val();
-                var VUELO_ORIGEN    = $('#VUELO_ORIGEN').val();
-                var LINEA_REGRESO   = $('#LINEA_REGRESO').val();
-                var VUELO_REGRESO   = $('#VUELO_REGRESO').val();  
+            if(TIPO_PASAJE == 'Aereo'){  
 				
 				if(VUELO_REGRESO == '' || VUELO_REGRESO == null){
 					$('#VUELO_REGRESO').focus();
@@ -390,85 +570,131 @@
 					
 				}
 				
-                if( LINEA_ORIGEN    == ''  || 
-                    VUELO_ORGEN     == ''  || 
-                    LINEA_REGRESO   == ''  || 
-                    VUELO_REGRESO   == ''){
+                if( LINEA_ORIGEN        == ''  || 
+                    VUELO_ORIGEN        == ''  || 
+                    LINEA_REGRESO       == ''  || 
+                    VUELO_REGRESO       == ''){
                     return false;
                 }
             }
 
-
             if(TIPO_PASAJE != 'Aereo'){
                 var parametros = {
-                    'ID_COMISION'       : ID_COMISION,
-                    'CONSECUTIVO'       : CONSECUTIVO,
-                    'MEC_ORIGEN'        : MEC_ORIGEN,
-                    'INST_GENERA'       : INST_GENERA,
-                    'TIPO_REP'          : TIPO_REP,
-                    'UR'                : UR,
-                    'TEMA'              : TEMA,
-                    'TIPO_COM'          : TIPO_COM,
-                    'EVENTO'            : EVENTO,
-                    'URL_EVENTO'        : URL_EVENTO,
-                    'FECHAINICIO_COM'   : FECHAINICIO_COM,
-                    'FECHAFIN_COM'      : FECHAFIN_COM,
-                    'TIPO_VIAJE'        : TIPO_VIAJE,
-                    'ACUERDO'           : ACUERDO,
-                    'OFICIO'            : OFICIO,
-                    'CUBRE_PASAJE'      : CUBRE_PASAJE,
-                    'TIPO_PASAJE'       : TIPO_PASAJE,
-                    'GASTO_PASAJE'      : GASTO_PASAJE,
-                    'PAIS_ORIGEN'       : PAIS_ORIGEN,
-                    'ESTADO_ORIGEN'     : ESTADO_ORIGEN,
-                    'CIUDAD_ORIGEN'     : CIUDAD_ORIGEN,
-                    'PAIS_DESTINO'      : PAIS_DESTINO,
-                    'ESTADO_DESTINO'    : ESTADO_DESTINO,
-                    'CIUDAD_DESTINO'    : CIUDAD_DESTINO
+                    'ID_COMISION'           : ID_COMISION,
+                    'CONSECUTIVO'           : CONSECUTIVO,
+                    'MEC_ORIGEN'            : MEC_ORIGEN,
+                    'INST_GENERA'           : INST_GENERA,
+                    'TIPO_REP'              : TIPO_REP,
+                    'UR'                    : UR,
+                    'TEMA'                  : TEMA,
+                    'TIPO_COM'              : TIPO_COM,
+                    'EVENTO'                : EVENTO,
+                    'URL_EVENTO'            : URL_EVENTO,
+                    'FECHAINICIO_COM'       : FECHAINICIO_COM,
+                    'FECHAFIN_COM'          : FECHAFIN_COM,
+
+                    'TIPO_VIAJE'            : TIPO_VIAJE,
+                    'ACUERDO'               : ACUERDO,
+                    'OFICIO'                : OFICIO,
+                    'CUBRE_PASAJE'          : CUBRE_PASAJE,
+                    'TIPO_PASAJE'           : TIPO_PASAJE,
+                    'GASTO_PASAJE'          : GASTO_PASAJE,
+                    'PAIS_ORIGEN'           : PAIS_ORIGEN,
+                    'ESTADO_ORIGEN'         : ESTADO_ORIGEN,
+                    'CIUDAD_ORIGEN'         : CIUDAD_ORIGEN,
+                    'PAIS_DESTINO'          : PAIS_DESTINO,
+                    'ESTADO_DESTINO'        : ESTADO_DESTINO,
+                    'CIUDAD_DESTINO'        : CIUDAD_DESTINO,
+
+                    'FECHAINICIO_PAR'       : FECHAINICIO_PAR,
+                    'FECHAFIN_PAR'          : FECHAFIN_PAR,
+                    'MOTIVO'                : MOTIVO,
+                    'ANTECEDENTE'           : ANTECEDENTE,
+                    'ACTIVIDAD'             : ACTIVIDAD,
+                    'RESULTADOS'            : RESULTADOS,
+                    'URL_COMUNICADO'        : URL_COMUNICADO,
+
+                    'GASTOS'                : GASTOS,
+                    'TARIFA_DIARIA'         : TARIFA_DIARIA,
+                    'MONEDA'                : MONEDA,
+                    'GASTOS_COMPROBADOS'    : GASTOS_COMPROBADOS,
+                    'GASTOS_S_COMPROBAR'    : GASTOS_S_COMPROBAR,
+                    'VIATICOS_DEVUELTOS'    : VIATICOS_DEVUELTOS,
+                    'FECHAINICIO_HOTEL'     : FECHAINICIO_HOTEL,
+                    'FECHAFIN_HOTEL'        : FECHAFIN_HOTEL,
+                    'CUBRE_HOSPEDAJE'       : CUBRE_HOSPEDAJE,
+                    'HOTEL'                 : HOTEL,
+                    'COSTO_HOTEL'           : COSTO_HOTEL
                 }
             }else{
                 var parametros = {
-                    'ID_COMISION'       : ID_COMISION,
-                    'CONSECUTIVO'       : CONSECUTIVO,
-                    'MEC_ORIGEN'        : MEC_ORIGEN,
-                    'INST_GENERA'       : INST_GENERA,
-                    'TIPO_REP'          : TIPO_REP,
-                    'UR'                : UR,
-                    'TEMA'              : TEMA,
-                    'TIPO_COM'          : TIPO_COM,
-                    'EVENTO'            : EVENTO,
-                    'URL_EVENTO'        : URL_EVENTO,
-                    'FECHAINICIO_COM'   : FECHAINICIO_COM,
-                    'FECHAFIN_COM'      : FECHAFIN_COM,
-                    'TIPO_VIAJE'        : TIPO_VIAJE,
-                    'ACUERDO'           : ACUERDO,
-                    'OFICIO'            : OFICIO,
-                    'CUBRE_PASAJE'      : CUBRE_PASAJE,
-                    'TIPO_PASAJE'       : TIPO_PASAJE,
-                    'GASTO_PASAJE'      : GASTO_PASAJE,
-                    'LINEA_ORIGEN'      : LINEA_ORIGEN,
-                    'VUELO_ORIGEN'      : VUELO_ORIGEN,
-                    'LINEA_REGRESO'     : LINEA_REGRESO,
-                    'VUELO_REGRESO'     : VUELO_REGRESO,
-                    'PAIS_ORIGEN'       : PAIS_ORIGEN,
-                    'ESTADO_ORIGEN'     : ESTADO_ORIGEN,
-                    'CIUDAD_ORIGEN'     : CIUDAD_ORIGEN,
-                    'PAIS_DESTINO'      : PAIS_DESTINO,
-                    'ESTADO_DESTINO'    : ESTADO_DESTINO,
-                    'CIUDAD_DESTINO'    : CIUDAD_DESTINO
+                    'ID_COMISION'           : ID_COMISION,
+                    'CONSECUTIVO'           : CONSECUTIVO,
+                    'MEC_ORIGEN'            : MEC_ORIGEN,
+                    'INST_GENERA'           : INST_GENERA,
+                    'TIPO_REP'              : TIPO_REP,
+                    'UR'                    : UR,
+                    'TEMA'                  : TEMA,
+                    'TIPO_COM'              : TIPO_COM,
+                    'EVENTO'                : EVENTO,
+                    'URL_EVENTO'            : URL_EVENTO,
+                    'FECHAINICIO_COM'       : FECHAINICIO_COM,
+                    'FECHAFIN_COM'          : FECHAFIN_COM,
+
+                    'TIPO_VIAJE'            : TIPO_VIAJE,
+                    'ACUERDO'               : ACUERDO,
+                    'OFICIO'                : OFICIO,
+                    'CUBRE_PASAJE'          : CUBRE_PASAJE,
+                    'TIPO_PASAJE'           : TIPO_PASAJE,
+                    'GASTO_PASAJE'          : GASTO_PASAJE,
+                    'LINEA_ORIGEN'          : LINEA_ORIGEN,
+                    'VUELO_ORIGEN'          : VUELO_ORIGEN,
+                    'LINEA_REGRESO'         : LINEA_REGRESO,
+                    'VUELO_REGRESO'         : VUELO_REGRESO,
+                    'PAIS_ORIGEN'           : PAIS_ORIGEN,
+                    'ESTADO_ORIGEN'         : ESTADO_ORIGEN,
+                    'CIUDAD_ORIGEN'         : CIUDAD_ORIGEN,
+                    'PAIS_DESTINO'          : PAIS_DESTINO,
+                    'ESTADO_DESTINO'        : ESTADO_DESTINO,
+                    'CIUDAD_DESTINO'        : CIUDAD_DESTINO,
+
+                    'FECHAINICIO_PAR'       : FECHAINICIO_PAR,
+                    'FECHAFIN_PAR'          : FECHAFIN_PAR,
+                    'MOTIVO'                : MOTIVOss,
+                    'ANTECEDENTE'           : ANTECEDENTE,
+                    'ACTIVIDAD'             : ACTIVIDAD,
+                    'RESULTADOS'            : RESULTADOS,
+                    'URL_COMUNICADO'        : URL_COMUNICADO,
+
+                    'GASTOS'                : GASTOS,
+                    'TARIFA_DIARIA'         : TARIFA_DIARIA,
+                    'MONEDA'                : MONEDA,
+                    'GASTOS_COMPROBADOS'    : GASTOS_COMPROBADOS,
+                    'GASTOS_S_COMPROBAR'    : GASTOS_S_COMPROBAR,
+                    'VIATICOS_DEVUELTOS'    : VIATICOS_DEVUELTOS,
+                    'FECHAINICIO_HOTEL'     : FECHAINICIO_HOTEL,
+                    'FECHAFIN_HOTEL'        : FECHAFIN_HOTEL,
+                    'CUBRE_HOSPEDAJE'       : CUBRE_HOSPEDAJE,
+                    'HOTEL'                 : HOTEL,
+                    'COSTO_HOTEL'           : COSTO_HOTEL
                 }
             }
             
             $.ajax({
                 url : "./update.php",
                 type: 'post',
-                dataType: 'text',
+                dataType: 'json',
                 data: parametros,
                 success: function(res){
                     if(res==1){
-						window.location.href=window.location.href;
+                        $('#Mensaje').html('Comisión actualizada')
+                        $('#Finalizado').modal('show');
+                        $('#Finalizado').on('hide.bs.modal',function(){
+                            window.location.href=window.location.href;
+                        });
                     }else{
-                        alert(res)
+                        $('#Mensaje').html('Error al intentar actualizar la comisión: '+res)
+                        $('#Finalizado').modal('show');
                     }
                 }
             });

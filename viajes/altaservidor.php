@@ -13,7 +13,8 @@
 	$puesto                = clear_string($conexion,$_POST['puesto']);  
 	$email                 = clear_string($conexion,$_POST['email']);  
 	$pass                  = clear_string($conexion,$_POST['pass']);  
-	$fecha				   = date("Y-m-d");
+	$fecha                 = date("Y-m-d");
+
 	$consulta ="SELECT * FROM usuarios WHERE email = '$email'";
 	$searchsame=$conexion->query($consulta);
 	if($searchsame->num_rows >0){
@@ -30,7 +31,7 @@
 			$consulta ="INSERT INTO servidores (uid, tipo_personal, cargo, cargo_superior, unidad_administrativa, grupo, nombre_puesto)
 						VALUES ('$uid','$tpersonal','$cargo','$scargo','$uadministrativa','$grupo','$puesto')";
 			if($addservidor=$conexion->query($consulta)){
-				echo 2;
+				echo $uid;
 			}
 		}
 	}

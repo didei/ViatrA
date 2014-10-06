@@ -25,6 +25,7 @@
         <script src="../js/jquery-ui.min.js" type="text/javascript" ></script>
         <script src="../js/modernizr.custom.46539.js" type="text/javascript" ></script>
         <script src="../js/prefixfree.dynamic-dom.js" type="text/javascript" ></script>
+        <script src="../js/functions.js" type="text/javascript" ></script>
         
     	<link rel="stylesheet" href="../css/bootstrap.css">
         <link rel="stylesheet" href="../css/bootstrap-theme.css">
@@ -90,7 +91,7 @@
 			?>
         </div>
         <div class="footer" id="f-princ">
-        	&copy; Todos los Derechos Deservados a ifai.org.mx 2014
+        	&copy; Todos los Derechos Reservados al ifai.org.mx 2014
         </div>
     </body>
 </html>

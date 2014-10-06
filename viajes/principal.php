@@ -77,6 +77,32 @@
                     </div>
                 </div>
             </div>
+    <?php }else{ ?>
+    	  	 <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 margen_ar_40px" id="bienvenidos">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Bienvenido/a</h3>
+                    </div>
+                    <div class="panel-body row">
+                    	<div class   ="form-group col-xs-12" id='UR-div'>
+                    		<p>Viajes Transparentes es un sistema que nos ayuda a transparentar inteligentemente la información pública que se genera sobre los viajes de trabajo nacionales e internacionales de los comisionados y los servidores públicos del IFAI para fomentar un debate público informado y rendir cuentas en la materia.</p>
+
+							<p><span class="texto_verde">Por ahora no sigues a ningún servidor público del ifai</span>, a continuación te mostramos algunas recomendaciones para navegar en el sistema:</p>
+
+                            <p>+ En el bloque de <strong>Notificaciones recientes</strong> aparecen los 6 servidores públicos que actualmente se ecuentran <strong>ACTIVOS</strong> en alguna comisión.</p>
+                            
+                            <p>+ Para seguir algún servidor del ifai, únicamente dá clic en la cinta <strong>Seguir</strong> y ¡LISTO!</p>
+                            
+                            <p>+ En caso de que quisieras seguir a algún servidor público en especial, en la parte superior derecha se encuentra el buscador, donde ingresando nombre, apellidos o ambos puedes encontrar al servidor en caso de que éste se encuentre registrado en el sistema.</p>
+                            
+                            <p>+ Al dar clic en la imagen o nombre del servidor nos muestra su perfil, así como su información de la última comisión y sus comisiones anteriores en caso de tenerlas.</p>
+                            
+                            
+                            <p class="text-right">Cualquier problema, por favor comuníquese al <strong>correo contacto@didei.mx</strong></p>
+                        </div>
+                    </div>
+                </div>
+             </div> 
     <?php } ?>
     <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12" id="seguidos">
     	<div class="panel panel-info">
@@ -97,9 +123,25 @@
 						$pa = $row['primer_apellido'];
 						$img = $row['img'];
 				?>
-						<div class=" col-md-4 col-lg-4 col-sm-6 col-xs-6 text-center margen_ab_20px">
-                                <a href="?id=2&se=<?php echo $id_s;?>"><img src="../imgs/servidores/<?php echo $img; ?>" class="img-responsive img-circle center-block" alt="">
-                                <?php echo $nombre." ".$pa;?></a>
+						<div class=" col-md-4 col-lg-4 col-sm-6 col-xs-6 text-center margen_ab_30px">
+                            <a href="?id=2&se=<?php echo $id_s;?>">
+                            	<img src="../imgs/servidores/<?php echo $img; ?>" class="img-responsive img-circle center-block" alt="">
+                            </a>
+                            <div class="nombre-serv-seg"><a href="?id=2&se=<?php echo $id_s;?>"><?php echo $nombre." ".$pa;?></a></div>
+                            <div class="seg" onclick="seguir(<?php echo $id_s; ?>,<?php echo $uid; ?>);">
+                                <img src="../imgs/liston.png" alt="" class="img-liston center-block">
+                                <div class="seguir center-block">
+                                	<?php
+                                	$sql_seg = "SELECT id_seguimiento FROM seguimientos WHERE id_servidor = '$id_s' AND id_usuario = '$uid'";
+									$res_seg = $conexion->query($sql_seg);
+									if($res_seg->num_rows==0){
+										echo "Follow";
+									}else{
+										echo "Unfollow";
+									}
+									?>
+                                </div> 
+                            </div>
                         </div>
 				<?php	
 					}

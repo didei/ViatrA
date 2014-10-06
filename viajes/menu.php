@@ -13,33 +13,20 @@
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-    <?php
-		if($rol!=2){
-	?>
-      <ul class="nav navbar-nav">
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Menú <span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
-            <li><a href="#">Link 1</a></li>
-            <li><a href="#">Link 2</a></li>
-            <li><a href="#">Link 3</a></li>
-            <li class="divider"></li>
-            <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Link 4</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Link 5</a></li>
-          </ul>
-        </li>
-      </ul>
-    <?php
-		}
-	?>
+    <?php if($rol!=2){?>
+    <?php }?>
       <ul class="nav navbar-nav navbar-right">
-      	<form class="navbar-form navbar-left" role="search">
-          <div class="form-group">
-            <input type="text" class="form-control" placeholder="Buscar...">
-          </div>
-          <button type="submit" class="btn btn-default">Buscar</button>
-        </form>
+		<?php if($rol!=1){?>
+            <form class="navbar-form navbar-left" role="search" action="./" method="get" id='FrmBusqueda'>
+              <div class="form-group">
+                  <input type='hidden' name='id' value='2'>
+                  <input type='hidden' id='se' name='se'>
+                  <input type="search" name="criterio" id="criterio" class="form-control" placeholder="Buscar..." onKeyUp="javascript:autocompletar()" />
+                  <button type="button" id='btnBuscar' class="btn btn-default">Buscar</button>
+              </div>
+              <div id="opciones"></div>
+            </form>
+		<?php }?>
         <li>
           <a href="?id=1000" title="Cerrar sesión" class="glyphicon glyphicon-off"></a>
         </li>
@@ -47,3 +34,15 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
+
+<script>
+  $('#btnBuscar').click(function(){
+    var Criterio = $('#criterio').val();
+    if(Criterio == ''){
+      return false;
+    }
+    else{
+      $('#FrmBusqueda').submit();
+    }
+  });
+</script>
