@@ -1,7 +1,7 @@
-Viajes Transparentes - ifai
+ViatrA - Viajes Transparentes - ifai
 ==================== 
 
-Viajes Transparentes es un sistema que no ayuda transparentar inteligentemente la información pública que se genera sobre los viajes de trabajo nacionales e internacionales de los comisionados y los servidores públicos del IFAI para fomentar un debate público informado y rendir cuentas en la materia
+ViatrA es un sistema que no ayuda transparentar inteligentemente la información pública que se genera sobre los viajes de trabajo nacionales e internacionales de los comisionados y los servidores públicos del IFAI para fomentar un debate público informado y rendir cuentas en la materia
 
 Compatibilidad del navegador: 
 ===================== 
@@ -20,7 +20,7 @@ Para realizar la instalación vamos a usar la herramienta Mamp, y phpMyAdmin.
 
 Nos instalamos el Mamp y pulsamos en iniciar servidores. Nos aparecerá una página web donde vamos a configurar la base de datos de nuestra página, para usaremos el phpMyAdmin.
 
-Pulsamos en la pestaña superior en phpMyAdmin y creamos la base de datos que vamos a usar en nuestra instalación en local, yo la he llamado drupal7.
+Pulsamos en la pestaña superior en phpMyAdmin y creamos la base de datos que vamos a usar en nuestra instalación en local, yo la he llamado ViatrA.
 
 
 
