@@ -11,6 +11,15 @@ Versión de PHP:
 ===================== 
 5.5.0
 
+
+Nuestro equipo:
+=================== 
+•	Alejandro Ayón Flores
+•	Diego Muñoz Peréz
+•	Anastacio Favián Flores Lira
+•	Roberto Rodríguez Guiza
+•	Sergio Ricardo Palomares Arias
+
 Tema desarrollado y modificado: 
 =================== 
 www.didei.mx
@@ -18,3 +27,5 @@ www.didei.mx
 Imagen original diseñada por: 
 =================== 
 www.didei.mx
+
+
