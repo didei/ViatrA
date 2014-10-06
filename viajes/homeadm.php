@@ -68,20 +68,20 @@
 						$tcomisiones=$conexion->query($conteo);
 						$tcom=$tcomisiones->fetch_array();
 						
-						$conteo ="SELECT count(uid) AS 'usuarios' FROM usuarios";
+						$conteo ="SELECT count(uid) AS 'usuarios' FROM usuarios where rol = 2";
 						$tusuarios=$conexion->query($conteo);
 						$tusr=$tusuarios->fetch_array();
 
-						$conteo ="SELECT count(uid) AS 'act' FROM servidores";
+						$conteo ="SELECT count(uid) AS 'act' FROM usuarios where rol = 1";
 						$tupdates=$conexion->query($conteo);
 						$tupdate=$tupdates->fetch_array();
   					?>
   					<div class="col-xs-10 col-md-6"> <strong>Total de Comisiones:</strong></div>
-  					<div class="col-xs-1 col-xs-offset-0 col-md-offset-5"> <?php echo $tcom['comisiones'];?> </div>
+  					<div class="col-xs-2 col-xs-offset-0 col-md-offset-4"> <?php echo $tcom['comisiones'];?> </div>
   					<div class="col-xs-10 col-md-6"> <strong>Total de Usuarios:</strong></div>
-  					<div class="col-xs-1 col-xs-offset-0 col-md-offset-5"> <?php echo $tusr['usuarios'];?></div>
+  					<div class="col-xs-2 col-xs-offset-0 col-md-offset-4"> <?php echo $tusr['usuarios'];?></div>
   					<div class="col-xs-10 col-md-6"> <strong>Total de Servidores:</strong></div>
-  					<div class="col-xs-1 col-xs-offset-0 col-md-offset-5"> <?php echo $tupdate['act'];?></div>
+  					<div class="col-xs-2 col-xs-offset-0 col-md-offset-4"> <?php echo $tupdate['act'];?></div>
   				</div>
   			</div>
   		</div>

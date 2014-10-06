@@ -43,11 +43,12 @@
     		}
 			
 			$pass_md5 =	md5($password = NuevoPassword());
+			$date = date("Y-m-d");
 			
 			$sql = "INSERT INTO usuarios 
-						(nombre, primer_apellido, segundo_apellido, password, email, rol) 
+						(nombre, primer_apellido, segundo_apellido, password, email, rol, fecha_alta) 
 						VALUE
-						('$name', '$pa', '$sa', '$pass_md5', '$email', 2)";
+						('$name', '$pa', '$sa', '$pass_md5', '$email', 2, '$date')";
 			if($res = $conexion->query($sql)){
 				if($conexion->affected_rows){
 					$num = 1;

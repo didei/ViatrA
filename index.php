@@ -147,7 +147,7 @@
         <div class="footer">
         	<img src="./imgs/img-foo-cont.png" alt="" />
             <br />
-            &copy; Todos los Derechos Deservados a ifai.org.mx 2014
+            &copy; Todos los Derechos Reservados a ifai.org.mx 2014
         </div>
         <script>
 			$(document).ready(function(){

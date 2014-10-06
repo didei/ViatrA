@@ -52,7 +52,9 @@
                         FROM comisiones as c, traslado as t
                         WHERE c.id_servidor = $uid && c.id_comision = t.id_comision && c.estatus = 1";
               $Resultado = $conexion->query($query);
-              $Filas = $Resultado->fetch_array();
+			  if($Resultado){
+              	$Filas = $Resultado->fetch_array();
+			  }
               if($Resultado->num_rows!=0){?>  
              		<div class="col-xs-12">
                   <h4>Evento</h4>

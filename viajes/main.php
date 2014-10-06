@@ -31,8 +31,6 @@
 	}
 	if($rol==0){/* Administrador*/
 		switch ($id) {
-			default : include_once("./homeadm.php");
-			    break;
 			case 1 : include_once("./faddservidor.php");
 				break;
 			case 2: include_once("./allcomisiones.php");
@@ -47,8 +45,12 @@
 				break;
 			case 7: include_once("./gfoto.php");
 				break;
+			case 10: include_once("./perfil.php"); 
+				break;
 			case 1000: include_once("./logout.php");
 				break;
+			default : include_once("./homeadm.php");
+			    break;
 		}
 	}
 ?>

@@ -68,22 +68,8 @@
         		Viajes Transparentes
             </div>
             <div class="form-busqueda div-header">
-            	<!--div class="row">
-                  	<div class="col-lg-offset-9 col-lg-3 col-md-offset-8 col-md-4 col-sm-offset-7 col-sm-5 col-xs-offset-6 col-xs-6" id="campo-busqueda">
-                    	<div class="input-group">
-                      		<input type="text" class="form-control">
-                      		<span class="input-group-btn">
-                        		<button class="btn btn-default" type="button">Buscar</button>
-                      		</span>
-                    	</div><!-- /input-group -->
-                  	<!--/div><!-- /.col-lg-6 -->
-                <!--/div><!-- /.row -->
                 <?php include("./menu.php"); ?>
             </div>
-            
-        	<!--div id="close">
-            	<a href="?id=1000" title="Cerrar sesión" class="glyphicon glyphicon-off"></a>
-            </div-->
         </div>
         <div class="contenido contenido-seccion">
         	<?php

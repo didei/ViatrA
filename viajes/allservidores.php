@@ -59,23 +59,6 @@
 	 								<?php
 	 								}
 	 							?>
-		 						<!--<ul class="pagination col-xs-12">
-								  <li>
-								    <a href="#">&laquo;</a>
-								  </li>
-								  <?php
-								  	$cont = 1;
-								  	while($cont<$paginas){
-								  		?>
-								  		<li>
-								  			<a href="#"><?php echo $cont ;?></a>
-								  		</li>
-								  	<?php
-								  		$cont ++;
-								  	}		
-								  ?>
-								  <li><a href="#">&raquo;</a></li>-->
-								</ul>
 	 						</tbody>
 	 					</table>
 	 				</div>

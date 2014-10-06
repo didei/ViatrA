@@ -19,7 +19,7 @@
 		<?php if($rol!=1){?>
             <form class="navbar-form navbar-left" role="search" action="./" method="get" id='FrmBusqueda'>
               <div class="form-group">
-                  <input type='hidden' name='id' value='2'>
+                  <input type='hidden' name='id' value='<?php if($rol=='0') echo 10; else echo 2;?>'>
                   <input type='hidden' id='se' name='se'>
                   <input type="search" name="criterio" id="criterio" class="form-control" placeholder="Buscar..." onKeyUp="javascript:autocompletar()" />
                   <button type="button" id='btnBuscar' class="btn btn-default">Buscar</button>

@@ -85,7 +85,7 @@
             <?php
             if ($respuesta->num_rows == 0){
             ?>
-            <button class="btn btn-warning" onclick="location.href='?id=1000'">Regresar</button>
+            <button class="btn btn-warning" onclick="location.href='./'">Regresar</button>
             <?php
             }
             else{
