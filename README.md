@@ -11,7 +11,7 @@ El tema ha sido probado en los siguientes navegadores. IE8, Firefox, Google Chro
 Instalación:
 ===================== 
 Comenzamos descargando el arhivo comprimido de la página Web:
-Te lo puedes descargar en el siguiente enlace. https://github.com/didei/ifai
+Te lo puedes descargar en el siguiente enlace. https://github.com/didei/ViatrA
 
 
 Crear la base de datos de ViatrA
@@ -20,7 +20,7 @@ Para realizar la instalación vamos a usar la herramienta Mamp, y phpMyAdmin.
 
 Nos instalamos el Mamp y pulsamos en iniciar servidores. Nos aparecerá una página web donde vamos a configurar la base de datos de nuestra página, para usaremos el phpMyAdmin.
 
-Pulsamos en la pestaña superior en phpMyAdmin y creamos la base de datos que vamos a usar en nuestra instalación en local, yo la he llamado ViatrA.
+Pulsamos en la pestaña superior en phpMyAdmin y creamos la base de datos que vamos a usar en nuestra instalación en local, la hemos llamado SQL-Viatra.zip.
 
 
 
@@ -32,11 +32,12 @@ Versión de PHP:
 
 Nuestro equipo:
 =================== 
-•	Alejandro Ayón Flores
-•	Diego Muñoz Peréz
-•	Anastacio Favián Flores Lira
-•	Roberto Rodríguez Guiza
-•	Sergio Ricardo Palomares Arias
+
+•	Alejandro Ayón Flores - ayon@didei.mx
+•	Diego Muñoz Peréz - diegomp@didei.mx
+•	Anastacio Favián Flores Lira - favian@didei.mx
+•	Roberto Rodríguez Guiza - rober.guiza@didei.mx
+•	Sergio Ricardo Palomares - sergio.palomares@didei.mx
 
 Tema desarrollado y modificado: 
 =================== 
